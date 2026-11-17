@@ -1,0 +1,13 @@
+# Results — Unified wind turbine collective pitch control using DDQN
+
+All notebooks read the OpenFAST outputs from `Data/` through `utils.py`.
+
+| Notebook | Paper content |
+|---|---|
+| `01_training_selection.ipynb` | Table 3, choice of Δβ, ε0 and ε_decay (training wind, NEVI) |
+| `02_validation_results.ipynb` | Table 4, validation without scaling; check of the 0.1 MW threshold |
+| `03_pitch_rate_scaling.ipynb` | Fixed-rate sweeps, two-level adaptive rule (0.8/0.3 °/s) and its activity, Table 5, diagnostic offset test, data for Fig. 5 |
+| `04_test_results.ipynb` | Test on unseen turbulent winds, `tab:final_test` and its LaTeX code |
+| `05_paper_figures.ipynb` | Figures 2–5, saved to `Figures/` (run 03 before Figure 5) |
+
+Requirements: `openfast_toolbox`, `numpy` (≥ 2.0), `pandas`, `matplotlib`.

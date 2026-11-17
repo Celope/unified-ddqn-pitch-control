@@ -1,0 +1,27 @@
+# MATLAB / Simulink
+*.asv
+*.slxc
+slprj/
+Simulink/out_data*.mat
+
+# OpenFAST outputs written next to the model on every run
+IEA3.4-RWT-OpenFAST/*.out
+IEA3.4-RWT-OpenFAST/*.outb
+IEA3.4-RWT-OpenFAST/*.sum
+IEA3.4-RWT-OpenFAST/*.dbg
+IEA3.4-RWT-OpenFAST/*.ech
+
+# Empty .wnd files written by TurbSim (TurbSim.exe is kept)
+IEA3.4-RWT-OpenFAST/Wind/**/*.wnd
+!IEA3.4-RWT-OpenFAST/Wind/*sawtooth.wnd
+
+# Large data files, distributed through Zenodo (see README, section "Data")
+Results/Data/*.out
+IEA3.4-RWT-OpenFAST/Wind/**/*.bts
+
+# Python
+__pycache__/
+.ipynb_checkpoints/
+
+# Local
+_to_delete/
