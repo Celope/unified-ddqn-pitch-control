@@ -68,9 +68,13 @@ end
 %% Evaluate
 Ts = 0.025;
 rate=7;
-TMax=5500;
+TMax=5250;
 agent = load('./agent/agente_trainPitch_pr.mat','agent');
 agent = agent.agent;
 agent.SampleTime=Ts; 
 
-% agent.SampleTime=Ts; 
+%% Check that the final (refined) agent is loaded
+ref = load('./agent/agente_trainPitch_pr.mat','agent');
+assert(isequal(getLearnableParameters(getCritic(agent)), ...
+               getLearnableParameters(getCritic(ref.agent))), ...
+       'The loaded agent is not agente_trainPitch_pr.mat');

@@ -17,6 +17,7 @@ IEA3.4-RWT-OpenFAST/Wind/**/*.wnd
 
 # Large data files, distributed through Zenodo (see README, section "Data")
 Results/Data/*.out
+Results/Data_excluded/
 IEA3.4-RWT-OpenFAST/Wind/**/*.bts
 
 # Python
