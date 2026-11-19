@@ -28,24 +28,25 @@ of Espinoza et al., *ISA Transactions* 169 (2026) 428–435, doi:10.1016/j.isatr
 
 ## 2. Data
 
-The OpenFAST output files (`Results/Data/*.out`, ~2 GB) and the TurbSim wind fields
-(`IEA3.4-RWT-OpenFAST/Wind/**/*.bts`, ~250 MB) are not stored in this repository.
-They are available on Zenodo: **DOI: TODO (add after the Zenodo record is created)**.
+The OpenFAST output files (`Results/Data/*.out`, ~2 GB) and the wind input files are archived on Zenodo:
+**[doi:10.5281/zenodo.24380664](https://doi.org/10.5281/zenodo.24380664)** (CC BY 4.0; this DOI always
+resolves to the latest version; version 1.0: [10.5281/zenodo.24380665](https://doi.org/10.5281/zenodo.24380665)).
+The `.out` and `.bts` files are not stored in this repository.
 
 | Archive | Content | Extract to |
 |---|---|---|
-| `Results_Data.7z` | All `.out` files used by the notebooks (Section 9) | `Results/Data/` |
-| `Wind_bts.7z` | TurbSim `.bts` files (training, validation, test) | `IEA3.4-RWT-OpenFAST/Wind/`, keeping the `train_wind/`, `val_wind/`, `test_wind/` folders |
+| `Results_Data.zip` | All `.out` files used by the notebooks (Section 9) and their naming convention (`README.md`) | `Results/Data/` |
+| `Wind_files.zip` | TurbSim `.bts` files (training, validation, test) and the sawtooth `.wnd` files | `IEA3.4-RWT-OpenFAST/Wind/`, keeping the `train_wind/`, `val_wind/`, `test_wind/` folders |
 
-The `.bts` files can also be regenerated with TurbSim (`TurbSim.exe` is included in
-`Wind/train_wind/` and `Wind/test_wind/`) from the `.inp` files stored next to them, which
-contain the random seeds:
+The sawtooth `.wnd` files are also stored in this repository. The `.bts` files can be regenerated with
+TurbSim (`TurbSim.exe` is included in `Wind/train_wind/` and `Wind/test_wind/`) from the `.inp` files
+stored next to them, which contain the random seeds:
 
 ```
 TurbSim.exe IEAonshore_11mps_10_train.inp
 ```
 
-The notebooks in `Results/` only need the `.out` files; the `.bts` files are needed only to
+The notebooks in `Results/` only need the `.out` files; the wind files are needed only to
 run new OpenFAST simulations.
 
 ## 3. Requirements
