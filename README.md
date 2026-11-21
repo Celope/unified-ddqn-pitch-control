@@ -29,13 +29,16 @@ of Espinoza et al., *ISA Transactions* 169 (2026) 428–435, doi:10.1016/j.isatr
 ## 2. Data
 
 The OpenFAST output files (`Results/Data/*.out`, ~2 GB) and the wind input files are archived on Zenodo:
-**[doi:10.5281/zenodo.24380664](https://doi.org/10.5281/zenodo.24380664)** (CC BY 4.0; this DOI always
-resolves to the latest version; version 1.0: [10.5281/zenodo.24380665](https://doi.org/10.5281/zenodo.24380665)).
+**[doi:10.5281/zenodo.24380664](https://doi.org/10.5281/zenodo.24380664)** (CC BY 4.0). This DOI always
+resolves to the latest version. Version 1.1 differs from version 1.0
+([10.5281/zenodo.24380665](https://doi.org/10.5281/zenodo.24380665)) only in the standalone `README.md`,
+which now describes the data files (the same file as `Results/Data/README.md`); the data archives are identical.
 The `.out` and `.bts` files are not stored in this repository.
 
 | Archive | Content | Extract to |
 |---|---|---|
 | `Results_Data.zip` | All `.out` files used by the notebooks (Section 9) and their naming convention (`README.md`) | `Results/Data/` |
+| `README.md` | Naming convention of the `.out` files (same as `Results/Data/README.md`) | — |
 | `Wind_files.zip` | TurbSim `.bts` files (training, validation, test) and the sawtooth `.wnd` files | `IEA3.4-RWT-OpenFAST/Wind/`, keeping the `train_wind/`, `val_wind/`, `test_wind/` folders |
 
 The sawtooth `.wnd` files are also stored in this repository. The `.bts` files can be regenerated with
