@@ -219,10 +219,17 @@ All offset tests use the 10 m/s start-up (`SAW10 = true`) and `KFIX = 0.01` (0.0
 | Table 4, Fig. 4 | 5 validation winds | κ = 1 (0.4 °/s) | `02_validation_results.ipynb` |
 | Fig. 5A | 10 m/s sawtooth | Fixed rates 0.004, 0.04, 0.4, 0.6 °/s (0.3 °/s quoted in the text) | `03_pitch_rate_scaling.ipynb` |
 | Fig. 5B | 11 m/s TI = 10 % (validation) | Fixed rates 0.3–0.8 °/s + adaptive rule | `03_pitch_rate_scaling.ipynb` |
-| Table 5 | 15 m/s sawtooth; 11 and 15 m/s TI = 10 % (validation) | Adaptive rule (and 0.8 °/s at 15 m/s, quoted in the text) | `03_pitch_rate_scaling.ipynb` |
+| Table 5, validation block | 15 m/s sawtooth; 11 and 15 m/s TI = 10 % (validation) | Adaptive rule (and 0.8 °/s at 15 m/s, quoted in the text) | `03_pitch_rate_scaling.ipynb` |
 | Diagnostic offset test | 10 m/s sawtooth | 0.004 °/s + `off-1-below` | `03_pitch_rate_scaling.ipynb` |
-| Table 6 | 11 and 15 m/s TI = 10 % (test) | Adaptive rule | `04_test_results.ipynb` |
+| Table 5, test block | 11 and 15 m/s TI = 10 % (test) | Adaptive rule | `04_test_results.ipynb` |
 | Figures 2–5 | — | — | `05_paper_figures.ipynb` (run 03 first) |
+
+**Table numbering.** In the manuscript, the adaptive-rule results are presented in a single table
+(Table 5, label `tab:best`) with two blocks: validation (computed in notebook 03) and test on unseen
+turbulent winds (computed in notebook 04). The notebooks keep these two blocks as separate tables.
+Earlier drafts of the manuscript, and earlier versions of this repository, numbered the test block as
+Table 6. The data archived on Zenodo (Section 2) do not depend on table numbering: each `.out` file is
+identified by its name (`Results/Data/README.md`), and the table above maps each result to its runs.
 
 ## 10. Checklist before each run
 

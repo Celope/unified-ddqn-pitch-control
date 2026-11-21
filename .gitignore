@@ -20,6 +20,10 @@ Results/Data/*.out
 Results/Data_excluded/
 IEA3.4-RWT-OpenFAST/Wind/**/*.bts
 
+# Figure 1 (schematic power curve) and its notebook: not part of the public repository
+Results/Figures/Figure_1.pdf
+Results/00_figure1_power_curve.ipynb
+
 # Python
 __pycache__/
 .ipynb_checkpoints/
